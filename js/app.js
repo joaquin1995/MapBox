@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoiam9hcXVpbjE5OTUiLCJhIjoiY2pwMDQ5ZjdrMDM0YzNqbG54NWZoOWxobSJ9.R03b-5kOB8QXfbiuyZWbGw';
+mapboxgl.accessToken = 'tu apikey';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/light-v10',
@@ -110,7 +110,7 @@ document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 
 let directions = new MapboxDirections({
-    accessToken: 'pk.eyJ1Ijoiam9hcXVpbjE5OTUiLCJhIjoiY2pwMDQ5ZjdrMDM0YzNqbG54NWZoOWxobSJ9.R03b-5kOB8QXfbiuyZWbGw',
+    accessToken: 'tu apikey',
     unit: 'metric',
     profile: 'mapbox/cycling',
     interactive:false,
@@ -153,7 +153,7 @@ map.addControl(directions);
 
 const get = async (lng,lat)=>{
 
-    const url = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=pk.eyJ1Ijoiam9hcXVpbjE5OTUiLCJhIjoiY2pwMDQ5ZjdrMDM0YzNqbG54NWZoOWxobSJ9.R03b-5kOB8QXfbiuyZWbGw`);
+    const url = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=apikey`);
     const data = await url.json();
     // console.log(data);    
     return data;
